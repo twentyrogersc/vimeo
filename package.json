@@ -1,0 +1,11 @@
+{
+  "name" : "vimeo",
+  "description" : "Node.js module for the vimeo api.",
+  "version" : "0.1.0",
+  "author" : "Craig Rogers",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twentyrogersc/vimeo.git"
+  }
+}
