@@ -12,11 +12,17 @@ See [vimeo.com/api/docs/simple-api](http://vimeo.com/api/docs/simple-api) for fu
 
 ```javascript
 var vimeo = require('vimeo')
-vimeo.user('brad/info', function(err, res) {
-  console.log(res)
+
+vimeo.user('brad/likes', function(err, res) {
+  console.log(res[0].id)
+})
+
+// pass in page param
+vimeo.user('brad/likes', { page: 2 }, function(err, res){
+  console.log(res[0].id)
 })
 ```
 ## Todo
 * Advanced api
 * Better error checking
-* Allow page param for simple requests
+* ~~Allow page param for simple requests~~

@@ -29,7 +29,7 @@ describe('vimeo', function() {
       })
     })
     it('should return user likes', function(done) {
-      vimeo.user('brad/likes', function(err, res) {
+      vimeo.user('brad/likes', { page: 2 }, function(err, res) {
         should.not.exist(err)
         res[0].should.have.property('title')
         done()

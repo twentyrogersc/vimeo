@@ -1,8 +1,8 @@
 var http = require('http')
 var url = require('url')
+var qs = require('querystring')
 
 var simple = {
-  base: 'http://vimeo.com/api/v2',
   methods: {
     video: '',
     user: '',
@@ -12,20 +12,25 @@ var simple = {
     album: ''
   },
   create: function(method) {
-    return function(end, cb) {
-      var getUrl = simple.url(method, end)
-      simple.get(getUrl, cb)
+    return function(end, params, cb) {
+      if (typeof params === 'function') cb = params
+      if (typeof params.page === 'undefined') params = { page: 1 }
+      var opts = simple.opts(method, end, params)
+      simple.get(opts, cb)
     }
   },
-  url: function(method, end) {
-    end = String(end)
-    var parts = end.split('.')[0].split('/')
-    parts.unshift(simple.base, method)
-    return [ parts.join('/'), 'json'].join('.')
+  opts: function(method, end, params) {
+    var path = ['/api/v2', method, end].join('/')
+    path = path.replace(/[\/]{2,}/, '/')
+    path = [path, 'json'].join('.')
+    return {
+      host: 'vimeo.com',
+      path: [path, qs.stringify(params)].join('?'),
+    }
   },
-  get: function(getUrl, cb) {
+  get: function(opts, cb) {
     var data = []
-    http.get(url.parse(getUrl), function(res) {
+    http.get(opts, function(res) {
       res.on('data', function(chunk) {
         data.push(chunk)
       }).on('end', function() {
