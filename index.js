@@ -5,6 +5,7 @@ var simple = {
   base: 'http://vimeo.com/api/v2',
   methods: {
     video: '',
+    user: '',
     activity: '', 
     group: '',
     channel: '',
