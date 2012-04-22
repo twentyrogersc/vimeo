@@ -1,11 +1,21 @@
 {
   "name" : "vimeo",
   "description" : "Node.js module for the vimeo api.",
-  "version" : "0.1.0",
-  "author" : "Craig Rogers",
+  "version" : "0.1.1",
+  "author" : "Craig Rogers <hello@crai.gr>",
   "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/twentyrogersc/vimeo.git"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
   }
 }
