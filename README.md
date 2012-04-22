@@ -1,5 +1,7 @@
 #vimeo
-Node.js module for the vimeo api.
+Node.js module for the vimeo api. 
+
+[![Build Status](https://secure.travis-ci.org/twentyrogersc/vimeo.png)](http://travis-ci.org/twentyrogersc/vimeo)
 
 ## Installation
 
