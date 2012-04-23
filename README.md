@@ -26,7 +26,7 @@ vimeo.user('brad/likes', { page: 2 }, function(err, res) {
 ```
 
 ## Advanced API
-See [vimeo.com/api/docs/methods](http://vimeo.com/api/docs/methods) for full list of methods.
+Currently supporting methods not requiring auth. See [vimeo.com/api/docs/methods](http://vimeo.com/api/docs/methods) for full list of methods.
 
 ```javascript
 var vimeo = require('vimeo').advanced(key, secret)
