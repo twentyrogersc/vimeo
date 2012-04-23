@@ -20,7 +20,7 @@ vimeo.user('brad/likes', function(err, res) {
 })
 
 // pass in page param
-vimeo.user('brad/likes', { page: 2 }, function(err, res){
+vimeo.user('brad/likes', { page: 2 }, function(err, res) {
   console.log(res[0].id)
 })
 ```
