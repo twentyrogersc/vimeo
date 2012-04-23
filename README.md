@@ -40,5 +40,5 @@ vimeo.channels('getVideos', params, function(err, res) {
 
 ## Todo
 * Advanced api methods requiring auth
-* Better error checking
+* ~~Better error checking~~
 * ~~Allow page param for simple requests~~
