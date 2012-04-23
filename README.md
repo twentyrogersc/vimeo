@@ -35,7 +35,6 @@ var params = { channel_id: 'moco' }
 vimeo.channels('getVideos', params, function(err, res) {
   console.log(res.videos.video)
 })
-
 ```
 
 ## Todo
