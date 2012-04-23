@@ -24,7 +24,21 @@ vimeo.user('brad/likes', { page: 2 }, function(err, res){
   console.log(res[0].id)
 })
 ```
+
+## Advanced API
+See [vimeo.com/api/docs/methods](http://vimeo.com/api/docs/methods) for full list of methods.
+
+```javascript
+var vimeo = require('vimeo').advanced(key, secret)
+
+var params = { channel_id: 'moco' }
+vimeo.channels('getVideos', params, function(err, res) {
+  console.log(res.videos.video)
+})
+
+```
+
 ## Todo
-* Advanced api
+* Advanced api methods requiring auth
 * Better error checking
 * ~~Allow page param for simple requests~~
