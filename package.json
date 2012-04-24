@@ -1,7 +1,7 @@
 {
   "name" : "vimeo",
   "description" : "Node.js module for the vimeo api.",
-  "version" : "0.1.4",
+  "version" : "0.1.5",
   "author" : "Craig Rogers <hello@crai.gr>",
   "main": "./index.js",
   "repository": {
