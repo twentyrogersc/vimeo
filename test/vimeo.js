@@ -32,7 +32,7 @@ describe('vimeo', function() {
       })
     })
     
-    it('should not catch an error from vimeo', function(done) {
+    it('should catch an error from vimeo', function(done) {
       simple.channel('1/videos', function(err, res) {
         should.not.exist(res)
         err.should.equal('Requested item not found')
