@@ -13,7 +13,7 @@ npm install vimeo
 See [vimeo.com/api/docs/simple-api](http://vimeo.com/api/docs/simple-api) for full list of requests.
 
 ```javascript
-var vimeo = require('vimeo')
+var vimeo = require('vimeo')()
 
 vimeo.user('brad/likes', function(err, res) {
   console.log(res[0].id)
@@ -29,7 +29,9 @@ vimeo.user('brad/likes', { page: 2 }, function(err, res) {
 Currently supporting methods not requiring auth. See [vimeo.com/api/docs/methods](http://vimeo.com/api/docs/methods) for full list of methods.
 
 ```javascript
-var vimeo = require('vimeo').advanced(key, secret)
+var key = '' // vimeo api key
+var secret = '' // vimeo api secret
+var vimeo = require('vimeo')(key, secret)
 
 var params = { channel_id: 'moco' }
 vimeo.channels('getVideos', params, function(err, res) {
