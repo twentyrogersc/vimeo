@@ -33,7 +33,7 @@ var key = '' // vimeo api key
 var secret = '' // vimeo api secret
 var vimeo = require('vimeo')(key, secret)
 
-// vimeo.area(method, [params, [access]], callback)
+// vimeo.area(method[, params[, access]], callback)
 
 var params = { channel_id: 'moco' }
 vimeo.channels('getVideos', params, function(err, res) {
