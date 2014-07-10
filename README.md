@@ -43,14 +43,14 @@ vimeo.channels('getVideos', params, function(err, res) {
 
 ### OAuth
 ```javascript
-// get a request secret and redirect
-vimeo.getRequestToken('http://redirecturl', function(err, req) {
+// get a request secret and redirect (perms can be 'read', 'write', or 'delete')
+vimeo.getRequestToken('http://redirecturl', perms, function(err, req) {
   // req.secret: store in session for vimeo.getAccessToken
   // req.redirect: send user to this url
 })
 
-// token and verifier from vimeo callback query string, secret from getRequestToken
-vimeo.getAccessToken = function(token, secret, verifier, function(err, access)) {
+// token and verifier from vimeo callback query string, secret from vimeo.getRequestToken
+vimeo.getAccessToken(token, secret, verifier, function(err, access) {
   // access containes access token and access token secret ready for vimeo calls
   vimeo.people('getInfo', {}, access, function(err, res) {
     console.log(res.username)
