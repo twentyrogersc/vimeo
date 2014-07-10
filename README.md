@@ -60,3 +60,6 @@ vimeo.getAccessToken = function(token, secret, verifier, function(err, access)) 
 
 ## Dependencies
 node-oauth [github.com/ciaranj/node-oauth](https://github.com/ciaranj/node-oauth)
+
+## License
+MIT license - [opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)

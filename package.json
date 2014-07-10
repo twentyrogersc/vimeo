@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/twentyrogersc/vimeo.git"
   },
+  "licenses" : [{
+    "type" : "MIT",
+    "url" : "http://www.opensource.org/licenses/mit-license.php"
+  }],
   "dependencies": {
     "oauth": "0.9.6"
   },
