@@ -1,3 +1,6 @@
+**The api this module uses is now deprecated.  
+Please use [vimeo/vimeo.js](https://github.com/vimeo/vimeo.js) instead.**
+
 #vimeo
 Node.js module for the vimeo api. 
 
